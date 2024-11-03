@@ -1,0 +1,136 @@
+/* =======================
+table of contents
+==========================
+
+1- Left Section => buttons 
+2- Right Section => card 
+3- Responsive (Media Query)
+*/
+
+main.flex {
+  gap: 2.64rem;
+  align-items: start;
+}
+/* ==============================
+    1- Left Section => buttons 
+=================================*/
+main section.left-section {
+  flex-direction: column;
+  gap: 10px;
+}
+main section.left-section button {
+  background-color: rgba(36, 37, 46, 1);
+  width: 11rem;
+  padding: 0.75rem 0;
+  text-align: center;
+  opacity: 0.5;
+  font-size: 1.05rem;
+  text-transform: capitalize;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+main section.left-section button:hover {
+  opacity: 1;
+}
+main section.left-section button.active {
+  border: 1px solid var(--blue);
+  padding: 0.8rem 0;
+  opacity: 1;
+  letter-spacing: 0.6px;
+  font-weight: bold;
+}
+.light main section.left-section button.active {
+  border: 1px solid #0000;
+}
+/* ==============================
+    2- Right Section => card 
+=================================*/
+main section.right-section.flex {
+  flex-grow: 1;
+  flex-wrap: wrap;
+  column-gap: 16px;
+  row-gap: 2rem;
+  justify-content: center;
+  /* flex-grow: 1; */
+}
+.card .box {
+  padding: 1rem 0.4rem;
+}
+.card .box .icons {
+  justify-content: space-between;
+}
+.card .box .title {
+  color: var(--title);
+}
+.card .box .icons .link {
+  font-size: 0.9rem;
+  color: var(--blue);
+  margin-right: 12px;
+}
+.card .box .subtitle {
+  color: var(--subtitle);
+  font-size: 0.8rem;
+  margin-top: 0.7rem;
+  margin-bottom: 1.1rem;
+}
+.card .icons .icon-github,
+.card .icons .icon-link {
+  color: var(--subtitle);
+  font-size: 1.2rem;
+}
+.card .icons .icon-github:hover,
+.card .icons .icon-link:hover {
+  color: var(--icon-hover);
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+.right-section article.card {
+  border: 1px solid rgba(93, 188, 252, 0.3);
+  border-radius: 5px;
+  transition: 0.3s;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.05)
+  );
+  height: 100%; /* Ensures each card takes the full available height */
+  min-height: 320px; /* Set a minimum height for all cards */
+}
+.light .right-section article.card,
+.light .right-section article.card:hover {
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 1px 1px 1px rgba(0, 0, 0, 0.15);
+  border: none;
+}
+.light .right-section article.card:hover {
+  background-color: rgb(248, 248, 248);
+}
+.right-section article.card:hover {
+  border: 1px solid var(--blue);
+  cursor: pointer;
+  rotate: 1deg;
+  scale: 1.01;
+}
+.right-section article.card img {
+  border-radius: 5px;
+}
+
+/* ==============================
+  3- Responsive (Media Query)
+=================================*/
+
+@media (max-width: 600px) {
+  main.flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.64rem;
+  }
+  main section.left-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  main section.left-section button {
+    width: 7rem;
+    padding: 0.8rem 0;
+    font-size: 0.9rem;
+  }
+}

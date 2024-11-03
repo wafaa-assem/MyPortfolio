@@ -1,0 +1,77 @@
+/* =======================
+    table of contents
+==========================
+1- Left Section 
+2- Right Section => animation
+3- Media Query
+*/
+
+section.hero {
+  margin-top: 3rem;
+}
+
+/* ===================
+    1- Left Section
+====================== */
+
+section.hero .left-section {
+  flex-grow: 1;
+}
+section.hero .parent-avatar.flex {
+  align-items: end;
+  gap: 0.6rem;
+  min-height: 88px;
+}
+.parent-avatar .avatar {
+  width: 88px;
+  border-radius: 50%;
+  border: 1px solid darkorange;
+  padding: 1px;
+  box-shadow: 2px 2px 40px rgba(203, 200, 200, 0.586) inset;
+}
+.parent-avatar .icon-verified {
+  color: var(--blue);
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+section.hero h1.title {
+  color: var(--title);
+  font-size: 2.2rem;
+  margin: 24px 0;
+  line-height: 3.1rem;
+}
+section.hero p.subtitle {
+  color: var(--subtitle);
+  font-size: 0.9rem;
+  margin-bottom: 32px;
+  line-height: 1.6rem;
+}
+section.hero div.all-icons {
+  gap: 1.7rem;
+  font-size: 1.3rem;
+  color: var(--subtitle);
+}
+section.hero div.all-icons .icon:hover {
+  color: var(--icon-hover);
+  font-size: 1.4rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* ===============================
+    2- Right Section => animation
+================================== */
+.hero .right-section {
+  width: 100%;
+  translate: 100px 45px;
+}
+
+/* ===============================
+    3- Media Query
+================================== */
+@media (max-width: 1200px) {
+  .hero .right-section {
+    display: none;
+  }
+}
