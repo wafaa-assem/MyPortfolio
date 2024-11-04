@@ -1,7 +1,6 @@
 import "./main.css";
 import { useState } from "react";
 import { myProjects } from "./myProjects";
-
 import { AnimatePresence, motion } from "framer-motion";
 
 export const Main = () => {

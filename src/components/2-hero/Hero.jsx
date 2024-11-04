@@ -14,7 +14,7 @@ export const Hero = () => {
             initial={{ transform: "scale(0)" }}
             animate={{ transform: "scale(1)" }}
             transition={{ damping: 7, type: "spring", stiffness: 100 }}
-            src="./../../../public/me.jpeg"
+            src="me.jpeg"
             className="avatar"
             alt="avatar"
           />
